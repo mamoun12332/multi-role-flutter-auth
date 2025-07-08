@@ -1,20 +1,33 @@
-<<<<<<< HEAD
-# multi_role_flutter_auth
+# 🧑‍💼 multi-role-flutter-auth
 
-A new Flutter project.
+A modular and scalable **Flutter + Supabase authentication template** with **dynamic role-based onboarding and dashboards**.
 
-## Getting Started
+Built for developers building logistics, multi-user apps, or admin panels where users like **drivers**, **admins**, **agents**, etc., need **tailored views and features** — this project gives you a clean head start.
 
-This project is a starting point for a Flutter application.
+---
 
-A few resources to get you started if this is your first Flutter project:
+## 🚀 Features
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- 🔑 Email/password login using [Supabase](https://supabase.com/)
+- 🧩 Role-based onboarding flow
+- 🧭 Clean separation of login, signup, and role selection screens
+- 🧑‍💼 Easily configurable roles like `Guest`, `Member`, `Lead`, `Admin`, `SuperAdmin`
+- 🛡️ `.env`-based secrets handling with [flutter_dotenv](https://pub.dev/packages/flutter_dotenv)
+- 🎯 Scalable structure for real-world multi-role apps
+- 📱 Built with modern Material 3 Flutter UI
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-=======
-# multi-role-flutter-auth
->>>>>>> a25cdb0ada5cdccb57a55169bd9cafd294e8d43c
+---
+
+## 📁 Project Structure
+ib/
+├── auth/
+│ ├── login_screen.dart
+│ ├── signup_screen.dart
+├── models/
+│ └── user_role.dart
+├── onboarding/
+│ ├── role_selection_page.dart
+│ └── profile_setup_page.dart
+├── dashboards/
+│ └── ...
+├── main.dart
