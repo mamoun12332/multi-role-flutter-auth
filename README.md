@@ -19,15 +19,7 @@ Built for developers building logistics, multi-user apps, or admin panels where 
 ---
 
 ## 📁 Project Structure
-ib/
-├── auth/
-│ ├── login_screen.dart
-│ ├── signup_screen.dart
-├── models/
-│ └── user_role.dart
-├── onboarding/
-│ ├── role_selection_page.dart
-│ └── profile_setup_page.dart
-├── dashboards/
-│ └── ...
-├── main.dart
+## 🔍 Tags
+
+`flutter auth` • `supabase flutter` • `flutter login signup` • `role-based auth` • `flutter multi-user` • `flutter logistics template` • `supabase template` • `flutter onboarding` • `flutter auth with roles` • `flutter dashboard by role`
+
