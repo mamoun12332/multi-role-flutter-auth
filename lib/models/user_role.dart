@@ -46,22 +46,22 @@ extension UserRoleExtension on UserRole {
       case UserRole.admin:
         return 'admin';
       case UserRole.superadmin:
-        return 'fleet_manager';
+        return 'superadmin';
     }
   }
 
   IconData get icon {
     switch (this) {
       case UserRole.guest:
-        return Icons.person;
+        return Icons.person_outline;
       case UserRole.member:
-        return Icons.groups;
+        return Icons.group;
       case UserRole.lead:
-        return Icons.local_shipping;
+        return Icons.emoji_events;
       case UserRole.admin:
-        return Icons.shopping_cart;
+        return Icons.admin_panel_settings;
       case UserRole.superadmin:
-        return Icons.manage_accounts;
+        return Icons.security;
     }
   }
 
@@ -76,7 +76,7 @@ extension UserRoleExtension on UserRole {
         return UserRole.lead;
       case 'admin':
         return UserRole.admin;
-      case 'fleet_manager':
+      case 'superadmin':
         return UserRole.superadmin;
       default:
         return null;
