@@ -1,18 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
-//import 'pages/login_page.dart';
+import 'package:multi_role_flutter_auth/pages/login_screen.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+  // Load environment variables from the .env file
+  await dotenv.load(fileName: ".env");
+
   await Supabase.initialize(
-    url: 'Your Supabase URL',
-    anonKey: 'Your Supabase Anon Key',
+    url: dotenv.env['SUPABASE_URL'] ?? '',
+    anonKey: dotenv.env['SUPABASE_ANON_KEY'] ?? '',
   );
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -22,8 +29,8 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Inter', // Testing font
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: const LoginPage(), // 
-      debugShowCheckedModeBanner: false, // Remove debug banner
+      home: const LoginScreen(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
