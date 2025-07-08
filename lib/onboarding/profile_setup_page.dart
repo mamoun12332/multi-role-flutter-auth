@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'dart:math';
 import '../models/user_role.dart';
 import 'package:multi_role_flutter_auth/services/supabase_services.dart';
-import 'package:multi_role_flutter_auth/pages/dashboard_router.dart';
+import 'package:multi_role_flutter_auth/dashboard/dashboard_router.dart';
 
 class ProfileSetupPage extends StatefulWidget {
   final UserRole selectedRole;
